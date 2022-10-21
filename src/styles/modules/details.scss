@@ -1,0 +1,72 @@
+.card-details-container{
+  max-width: 1200px;
+  display: flex;
+  position: relative;
+
+  .card-details{
+    width: 100%;
+  }
+
+  img{
+    width: 600px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.15);
+    transition: .3s ease;
+
+  }
+  span{
+    position: absolute;
+    padding: 5px 10px;
+    font-family: 'Akira';
+    top: 75px;
+    font-size: 10px;
+    font-weight: bold;
+    left: -15px;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.2);
+
+    &.common{
+      background-color: #e0dada;
+    }
+    &.diamond{
+      background-color: #e0dada;
+    }
+    &.dark{
+      background-color: #181818;
+      color: white
+    }
+    &.tiger{
+      background-color: #e0dada;
+    }
+    &.special{
+      background-color: #050505;
+      animation: rainbow-text 3s ease infinite;
+
+    }
+    &.gold{
+      background-color: #F7CA0F;
+    }
+    &.bills{
+      background-color: #e0dada;
+    }
+    &.legendary{
+      background-color: #e0dada;
+    }
+    &.mafia{
+      &.mafia-red{
+        background-color: #D22E0B;
+      }
+      &.mafia-blue{
+        background-color: #00B4E1;
+      }
+      &.mafia-purple{
+        background-color: #7B00EE;
+      }
+      &.mafia-red-white{
+        background-color: #D22E0B;
+        color: white
+      }
+    }
+  }
+}

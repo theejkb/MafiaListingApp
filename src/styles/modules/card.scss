@@ -1,0 +1,97 @@
+.card-container {
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .card{
+    max-width: 300px;
+    position: relative;
+    margin: 25px auto;
+    img{
+      width: 100%;
+      max-width: 300px!important;
+      border-radius: 8px;
+      box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.15);
+      transition: .3s ease;
+
+    }
+    span{
+      position: absolute;
+      padding: 5px 10px;
+      font-family: 'Akira';
+      top: 75px;
+      z-index: 2;
+      font-size: 10px;
+      font-weight: bold;
+      left: -15px;
+      border-radius: 4px;
+      background: white;
+      box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.2);
+
+      &.common{
+        background-color: #e0dada;
+      }
+      &.diamond{
+        background-color: #e0dada;
+      }
+      &.dark{
+        background-color: #181818;
+        color: white
+      }
+      &.tiger{
+        background-color: #e0dada;
+      }
+      &.special{
+        background-color: #050505;
+        animation: rainbow-text 3s ease infinite;
+      }
+      &.gold{
+        background-color: #F7CA0F;
+      }
+      &.bills{
+        background-color: #e0dada;
+      }
+      &.legendary{
+        color: black;
+        animation: rainbow-bg 2s ease infinite;
+      }
+      &.mafia{
+        &.mafia-red{
+          background-color: #D22E0B;
+        }
+        &.mafia-blue{
+          background-color: #00B4E1;
+        }
+        &.mafia-purple{
+          background-color: #7B00EE;
+        }
+        &.mafia-red-white{
+          background-color: #D22E0B;
+          color: white
+        }
+      }
+    }
+  }
+}
+
+$rays: 50;
+@keyframes rainbow-text {
+  @for $i from 0 through $rays {
+    $frame: percentage($i / $rays);
+    #{$frame} {
+      color: hsl($i*360/$rays, 70%, 70%);
+    }
+  }
+}@keyframes rainbow-bg {
+  @for $i from 0 through $rays {
+    $frame: percentage($i / $rays);
+    #{$frame} {
+      background-color: hsl($i*360/$rays, 70%, 70%);
+      color: hsl($i*360/$rays, 100%, 100%);
+    }
+  }
+}

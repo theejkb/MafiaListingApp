@@ -1,0 +1,41 @@
+{
+  "name": "ng-nft-app",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^14.2.0",
+    "@angular/common": "^14.2.0",
+    "@angular/compiler": "^14.2.0",
+    "@angular/core": "^14.2.0",
+    "@angular/forms": "^14.2.0",
+    "@angular/platform-browser": "^14.2.0",
+    "@angular/platform-browser-dynamic": "^14.2.0",
+    "@angular/router": "^14.2.0",
+    "@taiga-ui/cdk": "^3.7.1",
+    "@taiga-ui/core": "^3.7.1",
+    "@taiga-ui/icons": "^3.7.1",
+    "@taiga-ui/kit": "^3.7.1",
+    "@taiga-ui/styles": "^3.7.1",
+    "@tinkoff/ng-dompurify": "3.0.0",
+    "dompurify": "2.2.9",
+    "materialize-css": "^1.0.0-rc.2",
+    "node-vibrant": "^3.2.1-alpha.1",
+    "rxjs": "~7.5.0",
+    "sweetalert2": "^11.6.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^14.2.6",
+    "@angular/cli": "~14.2.6",
+    "@angular/compiler-cli": "^14.2.0",
+    "@types/dompurify": "2.2.3",
+    "typescript": "~4.7.2"
+  }
+}

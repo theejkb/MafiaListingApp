@@ -1,0 +1,16 @@
+<div class="btn-retour">
+    <a (click)="goToMobsterList()"><-</a>
+</div>
+<div *ngIf="currentMob" class="card-details-container">
+    <img [src]="currentMob.media[0].thumbnailUrl" />
+    <span class="{{currentMob.metadata.attributes[0].value | mobsterBackgroundColor}}"> {{(currentMob.metadata.attributes[0].value | mobsterBackgroundColor | uppercase).split(' ').length > 1 ? 'MAFIA' : currentMob.metadata.attributes[0].value | mobsterBackgroundColor | uppercase}}</span>
+    <div class="img">
+
+    </div>
+    <div class="card-details">
+        <h3>{{currentMob.name}}</h3>
+        <div class="mobster-details">
+            <p *ngFor="let attrib of currentMob.metadata.attributes">{{attrib.trait_type + ' : ' + attrib.value}}</p>
+        </div>
+    </div>
+</div>

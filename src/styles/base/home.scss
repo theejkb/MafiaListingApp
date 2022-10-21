@@ -1,0 +1,31 @@
+body{
+  margin: 0;
+
+  .content{
+    padding-top: 140px;
+
+    .mobster-list{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  nav{
+    height: 50px;
+    background-color: #100f0f;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    .nav-wrapper{
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      a{
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}

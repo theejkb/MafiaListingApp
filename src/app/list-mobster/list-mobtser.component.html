@@ -1,0 +1,15 @@
+<div class="mobster-list">
+    <div class="search-mobster">
+        <input #input (keyup.enter)="findMobster(input.value)"  type="number"/>
+        <a (click)="findMobster(input.value)">Search</a>
+    </div>
+    <div class="card-container">
+        <div *ngFor="let mobster of mobstersList" (click)="selectMobster(this.mobster)" class="card">
+            <div class="mob-card">
+            <h3>{{mobster.name}}</h3>
+                <span class="{{mobster.metadata.attributes[0].value | mobsterBackgroundColor}}"> {{(mobster.metadata.attributes[0].value | mobsterBackgroundColor | uppercase).split(' ').length > 1 ? 'MAFIA' : mobster.metadata.attributes[0].value | mobsterBackgroundColor | uppercase}}</span>
+            <img mobBorderCard [src]="mobster.media[0].thumbnailUrl" />
+            </div>
+        </div>
+    </div>
+</div>
